@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Go Host</h1>
+        <ul class="menu">
+            <li><a href="home.html" class="menu-item">Home</a></li>
+            <li><a href="" class="menu-item">Domain</a></li>
+            <li><a href="" class="menu-item">Security</a></li>
+            <li><a href="" class="menu-item">Email</a></li>
+            <li><a href="signup.html" class="menu-item btn-login">Sigup/In</a></li>
+        </ul>
+    </nav>
+
+    <!--Registration Form-->
+
+    <section class="signup">
+        <div class="signup-card">
+            <div class="card-header">
+                <h1>SignUp</h1>
+            </div>
+            <div class="card-body">
+                <form action="home.html" method="get" onsubmit="validate(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                        <label  class="error" id="nameError"></label>
+                    </div>
+                    <br>
+                    <div class="form-group"><!--name should be same so that we can select one-->
+                        <label for="gender">Gender</label>
+                        <input type="radio" name="gender" value="Male">Male
+                        <input type="radio" name="gender" value="Male">Female
+                        <input type="radio" name="gender" value="Male">Other
+                        <label class="error" id="genderError"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                    <select name="" id="country">Country
+                        <option value="">--Select--</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                    </select>
+                    <label class="error" id="countryError"></label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address" placeholder="Enter your address">
+                        <label class="error" id="addressError"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile</label>
+                        <input type="tel" name="mobile" id="mobile" >
+                        <label  class="error" id="mobileError"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                        <label  class="error" id="emailError"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                        <label  class="error" id="passwordError"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" name="password2" id="password2">
+                        <label  class="error" id="password2Error"></label>
+                    </div>
+                    <input type="submit" value="SignUp"/>
+
+                        <br>
+                        <br>
+                        <input type="checkbox" id="agree" name="agree">
+                        <label for="agree">I agree to the terms and policy</label>
+                        <label  class="error" id="agreeError"></label>
+                   
+                </form>
+            </div>
+        </div>
+    </section>
+   
+</body>
+<script  src="./js/form-validator.js"></script> 
+</html>
